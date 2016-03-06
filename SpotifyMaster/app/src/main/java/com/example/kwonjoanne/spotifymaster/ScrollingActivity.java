@@ -25,7 +25,7 @@ public class ScrollingActivity extends AppCompatActivity {
         return "http://developer.echonest.com/api/v4/"
                 + category
                 + "/artists"
-                + "?api_key=" //input the api get here at some point
+                + "?api_key=MDJIDONZIBOISMKRD" //input the api get here at some point
                 + "&format=json&results=" + numResults
                 + "start=0"
                 + "&bucket=hotttnesss"
