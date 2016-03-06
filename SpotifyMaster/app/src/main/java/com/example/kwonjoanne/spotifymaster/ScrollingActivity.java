@@ -7,15 +7,35 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import org.json.JSONObject;
+
+import java.io.*;
 import java.util.ArrayList;
+import java.net.*;
 
 
 public class ScrollingActivity extends AppCompatActivity {
 
-    public void queryMusic(String query, ArrayList<String> results) //not sure if correct return yet
+    public void queryMusic(String query, ArrayList<String> results) throws Exception //not sure if correct return yet
     {
         //user library querying function
         //put them into results.
+
+        StringBuilder sb = new StringBuilder();
+        URL url = new URL(query);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        String line;
+        while((line = rd.readLine()) != null)
+        {
+            sb.append(line);
+        }
+        rd.close();
+
+        JSONObject res = new JSONObject(sb.toString());
+
+
 
     }
 
