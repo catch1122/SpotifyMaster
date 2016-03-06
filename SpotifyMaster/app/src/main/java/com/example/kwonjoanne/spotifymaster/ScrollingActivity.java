@@ -16,6 +16,22 @@ import java.net.*;
 
 public class ScrollingActivity extends AppCompatActivity {
 
+    //http://developer.echonest.com/api/v4/genre/artists?api_key=FILDTEOIK2HBORODV&format=json&results=5&start=0&bucket=hotttnesss&name=jazz
+    //
+    public String buildQueryString(String category /*like using genre, etc*/, String subCategory, int numResults)
+    {
+
+        return "http://developer.echonest.com/api/v4/"
+                + category
+                + "/artists"
+                + "?api_key=" //input the api get here at some point
+                + "&format=json&results=" + numResults
+                + "start=0"
+                + "&bucket=hotttnesss"
+                + "&name="
+                + subCategory;
+    }
+
     public void queryMusic(String query, ArrayList<String> results) throws Exception //not sure if correct return yet
     {
         //user library querying function
@@ -34,8 +50,6 @@ public class ScrollingActivity extends AppCompatActivity {
         rd.close();
 
         JSONObject res = new JSONObject(sb.toString());
-
-
 
     }
 
