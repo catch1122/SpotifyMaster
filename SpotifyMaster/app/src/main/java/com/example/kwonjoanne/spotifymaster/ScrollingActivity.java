@@ -37,6 +37,13 @@ public class ScrollingActivity extends AppCompatActivity {
 
     }
 
+    public Set<String> getArtistsFromUserAndUserFriends(){
+        /*enter the query to be made*/
+        string querytext = "theQuerystring";
+        //using our query to grab a JSONOBJECT
+        JSONObject queryResult = query(querytext);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
