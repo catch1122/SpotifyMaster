@@ -12,12 +12,13 @@ import org.json.JSONObject;
 import java.io.*;
 import java.util.ArrayList;
 import java.net.*;
+import java.util.Set;
+import java.util.Vector;
 
 
 public class ScrollingActivity extends AppCompatActivity {
 
     //http://developer.echonest.com/api/v4/genre/artists?api_key=FILDTEOIK2HBORODV&format=json&results=5&start=0&bucket=hotttnesss&name=jazz
-    //
     public String buildQueryString(String category /*like using genre, etc*/, String subCategory, int numResults)
     {
 
@@ -32,7 +33,7 @@ public class ScrollingActivity extends AppCompatActivity {
                 + subCategory;
     }
 
-    public void queryMusic(String query, ArrayList<String> results) throws Exception //not sure if correct return yet
+    public JSONObject query(String query) throws Exception //not sure if correct return yet
     {
         //user library querying function
         //put them into results.
@@ -50,6 +51,25 @@ public class ScrollingActivity extends AppCompatActivity {
         rd.close();
 
         JSONObject res = new JSONObject(sb.toString());
+
+        return new JSONObject(sb.toString());
+
+    }
+
+    public Vector<String> getArtistsFromUserAndUserFriends() {
+        /*enter the query to be made*/
+        String querytext = "theQuerystring";
+        //using our query to grab a JSONOBJECT
+        JSONObject queryResult;
+        try
+        {
+            queryResult = query(querytext);
+        }
+        catch (Exception e)
+        {
+            System.out.println("lol nope");
+        }
+        return new Vector<String>();
 
     }
 
