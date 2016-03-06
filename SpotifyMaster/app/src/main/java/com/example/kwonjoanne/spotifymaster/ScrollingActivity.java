@@ -16,7 +16,7 @@ import java.net.*;
 
 public class ScrollingActivity extends AppCompatActivity {
 
-    public void queryMusic(String query, ArrayList<String> results) throws Exception //not sure if correct return yet
+    public JSONObject query(String query) throws Exception //not sure if correct return yet
     {
         //user library querying function
         //put them into results.
@@ -33,9 +33,7 @@ public class ScrollingActivity extends AppCompatActivity {
         }
         rd.close();
 
-        JSONObject res = new JSONObject(sb.toString());
-
-
+        return new JSONObject(sb.toString());
 
     }
 
