@@ -11,6 +11,14 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
+    completions."
     </string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="spotifylogin">Login with Spotify</string>
+    <string name="spotifyMaster">
+        <![CDATA[
+        <p><font color=#009cde>Spotify</font><font color=#ffffff>Master</font></p>
+        ]]>
+    </string>
+    <string name="title_activity_test">TestActivity</string>
 </resources>

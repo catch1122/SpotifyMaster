@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="spotifyLoginButton">#474F46</color>
+    <color name="spotifyTextLogin">#68BD5E</color>
+    <color name="ticketmasterBlue">#009cde</color>
+    <color name="spotifyGreen">#81b71a</color>
 </resources>

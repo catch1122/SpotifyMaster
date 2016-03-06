@@ -24,6 +24,9 @@ repositories {
     flatDir {
         dirs 'libs'
     }
+//    maven {
+//        url "https://jitpack.io"
+//    }
 }
 
 dependencies {
@@ -33,6 +36,7 @@ dependencies {
     compile 'com.spotify.sdk:spotify-auth:1.0.0-beta12@aar'
     compile 'com.android.support:design:23.2.0'
     compile 'com.spotify.sdk:spotify-auth:1.0.0-beta12@aar' // NOTE: Version must match!
+//    compile 'com.github.Drivemode:SpotifyApi:8955407a90'
 
 }
 
